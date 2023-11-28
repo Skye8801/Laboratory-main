@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerBody
   - Animal
+  - AI
   layers:
   - Default
   - TransparentFX
