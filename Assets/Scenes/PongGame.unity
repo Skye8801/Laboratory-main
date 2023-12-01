@@ -331,7 +331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: 295}
+  m_AnchoredPosition: {x: 191, y: 324.8}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237720359
@@ -701,7 +701,26 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -12.6875, y: -6.7625003}
+    - - {x: 11.443328, y: -6.720331}
+      - {x: 10.617454, y: -6.638158}
+      - {x: 9.781153, y: -6.808106}
+      - {x: 8.785367, y: -6.63525}
+      - {x: 7.6614304, y: -6.8376656}
+      - {x: 5.8548036, y: -6.6459384}
+      - {x: 5.250595, y: -6.781315}
+      - {x: 3.5042083, y: -6.6127872}
+      - {x: 2.0298758, y: -6.7004666}
+      - {x: 1.0945129, y: -6.621324}
+      - {x: -0.48470384, y: -6.762882}
+      - {x: -1.0220011, y: -6.62437}
+      - {x: -2.5628743, y: -6.714971}
+      - {x: -2.97652, y: -6.798375}
+      - {x: -4.6197815, y: -6.6130176}
+      - {x: -6.743904, y: -6.7834163}
+      - {x: -7.425727, y: -6.661598}
+      - {x: -9.835862, y: -6.7891097}
+      - {x: -11.58195, y: -6.637811}
+      - {x: -12.6875, y: -6.7625003}
       - {x: -12.6875, y: -7.0875}
       - {x: 12.6875, y: -7.0875}
       - {x: 12.6875, y: -6.7625003}
@@ -717,6 +736,21 @@ PolygonCollider2D:
       - {x: 12.6875, y: 6.675}
     - - {x: -12.6875, y: 7.0875}
       - {x: -12.6875, y: 6.7625003}
+      - {x: -11.914453, y: 6.824845}
+      - {x: -9.150467, y: 6.776376}
+      - {x: -7.051522, y: 6.8373847}
+      - {x: -5.139422, y: 6.726215}
+      - {x: -3.3318489, y: 6.8338065}
+      - {x: -1.731142, y: 6.7227635}
+      - {x: 0.05548505, y: 6.8107066}
+      - {x: 1.9258418, y: 6.699727}
+      - {x: 3.5886219, y: 6.792331}
+      - {x: 4.814426, y: 6.6845307}
+      - {x: 6.581319, y: 6.8471413}
+      - {x: 8.200925, y: 6.742051}
+      - {x: 8.887595, y: 6.8277535}
+      - {x: 10.135911, y: 6.7241273}
+      - {x: 11.48336, y: 6.785524}
       - {x: 12.6625, y: 6.7625003}
       - {x: 12.6875, y: 6.7875}
       - {x: 12.6875, y: 7.0875}
@@ -822,7 +856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199.03741, y: 328.76407}
+  m_AnchoredPosition: {x: -199.03741, y: 324.9}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565152474
@@ -992,8 +1026,8 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d527cbc4154513c42ae811e051906875, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_FlipX: 1
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.3, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
@@ -1354,8 +1388,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1365,7 +1399,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 5
 --- !u!1 &2025893912
 GameObject:

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+
 public class NPCSystem : MonoBehaviour
 {
     public GameObject d_template;
@@ -17,6 +19,16 @@ public class NPCSystem : MonoBehaviour
             PlayerMove.dialogue = true;
             NewDialogue("Hi");
             NewDialogue("It's nice to meet you!");
+            canva.transform.GetChild(0).gameObject.SetActive(true);
+            Invoke(nameof(SwitchText), 2f);
+
+        }
+
+        if (player_detection && Input.GetKeyDown(KeyCode.Q) && !PlayerMove.dialogue)
+        {
+            PlayerMove.dialogue = true;
+            NewDialogue("Hi");
+            NewDialogue("I can't speak, I'll talk to you later.");
             canva.transform.GetChild(0).gameObject.SetActive(true);
             Invoke(nameof(SwitchText), 2f);
 
@@ -42,10 +54,7 @@ public class NPCSystem : MonoBehaviour
         {
             player_detection = true;
         }
-        else
-        {
-            Debug.Log("NPC no dialogue");
-        }
+
     }
 
     private void OnTriggerExit(Collider other)

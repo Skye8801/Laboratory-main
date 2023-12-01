@@ -1,31 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInteract : MonoBehaviour
 {
-    void Update()
+
+    [SerializeField] private TextMeshProUGUI yourText; // Inserts the text object inside unity inspector
+    //public GameObject canvas;
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(transform.position, transform.forward, out hitInfo, 5f);
+        yourText.enabled = false;
+    }
 
-            if (hit)
-            {
-                Interactable interactable;
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        { // This is what makes the text appear on screen
+            yourText.enabled = true;
+        }
+    }
 
-                hitInfo.transform.TryGetComponent<Interactable>(out interactable);
 
-                if(interactable != null)
-                {
-                    interactable.OnInteraction();
-                }
-                else
-                {
-                    Debug.Log("Not Interactable");
-                }
-            }
+
+    void OnCollisionExit(Collision collision)
+    {
+      if(collision.gameObject.tag == "Player")
+        { // This is what makes the text disapears from the screen
+            yourText.enabled = false;
         }
     }
 }

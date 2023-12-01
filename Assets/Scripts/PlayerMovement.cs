@@ -49,5 +49,33 @@ public class PlayerMove : MonoBehaviour
             Instantiate(FoodPrefab, transform.position + transform.forward, FoodPrefab.transform.rotation);
         }
 
+        // Koden nedan gör så att om man trycker på högra musknappen så kastar den fram en tallrik med korv där jag klickar musen.
+
+        /* if (Input.GetMouseButtonDown(1))
+         {
+             RaycastHit hit = new RaycastHit();
+
+             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity);
+
+             Vector3 spawnPosition = hit.point + new Vector3(0, 2, 0);
+
+             Transform parent = hit.transform;
+
+             SpawnFoodObject(spawnPosition, Quaternion.identity, parent);
+         }*/
+
     }
+
+    /*public void SpawnFoodObject(Vector3 position, Quaternion rotation, Transform parent = null)
+    {
+        if(parent != null)
+        {
+            GameObject newFoodPrefab = Instantiate(FoodPrefab, position, rotation);
+            newFoodPrefab.transform.parent = parent;
+        }
+        else
+        {
+            Instantiate(FoodPrefab, position, rotation);
+        }
+    }*/
 }

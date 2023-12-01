@@ -61,14 +61,19 @@ public class BallMovement : MonoBehaviour
             {
                 xDirection = 1f;
             }
-            xDirection = (ballPos.y - PlayerPos.y) / myObject.GetComponent<Collider2D>().bounds.size.y;
+            xDirection = (ballPos.x - PlayerPos.x) / myObject.GetComponent<Collider2D>().bounds.size.x;
 
-            if(yDirection == 0f)
-            {
-                yDirection = 0.05f;
-            }
+        if (transform.position.y < 0)
+        {
+            yDirection = 1f;
+        }
+        else
+        {
+            yDirection = -1f;
+        }
+        yDirection = (ballPos.y - PlayerPos.y) / myObject.GetComponent<Collider2D>().bounds.size.y;
 
-            Vector2 direction = new Vector2(xDirection, yDirection).normalized * (initialSpeed + (speedIncrease * hitCounter));
+        Vector2 direction = new Vector2(xDirection, yDirection).normalized * (initialSpeed + (speedIncrease * hitCounter));
 
             rb.velocity = direction;
 
@@ -87,17 +92,15 @@ public class BallMovement : MonoBehaviour
     {
         if(collision.transform.tag == "Finish")
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * -1);
-        }
-        else if(transform.position.x > 0f)
-        {
-            Debug.Log("Mål");
-            ResetBall();
-            playerScore.text = (int.Parse(playerScore.text) + 1).ToString();
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * -2f);
         }
         else if(transform.position.x < 0f)
         {
-            Debug.Log("Mål");
+            ResetBall();
+            playerScore.text = (int.Parse(playerScore.text) + 1).ToString();
+        }
+        else if(transform.position.x > 0f)
+        {
 
             ResetBall();
             AIScore.text = (int.Parse(AIScore.text) + 1).ToString();

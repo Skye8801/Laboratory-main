@@ -39,7 +39,7 @@ public class PlayerMovePongGame : MonoBehaviour
         {
             playerMove = new Vector2(0, 1);
         }
-        else if(ball.transform.position.y > transform.position.y + 0.5f)
+        else if(ball.transform.position.y < transform.position.y + 0.5f)
         {
             playerMove = new Vector2 (0, -1);
         }
